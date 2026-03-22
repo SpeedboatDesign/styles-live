@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Styles and Components Library</title>
+  <link rel="stylesheet" href="components-library.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    <nav class="nav-links" aria-label="Section links">
+      <details class="nav-dropdown">
+        <summary>Jump to section</summary>
+        <div class="nav-dropdown-menu">
+          <a href="#intro">Overview</a>
+          <a href="#foundations">Style foundations</a>
+          <a href="#semantics">Semantic tokens</a>
+          <a href="#states">Interaction states</a>
+          <a href="#responsive-rules">Responsive rules</a>
+          <a href="#a11y">Accessibility checklist</a>
+          <a href="#heroes">Hero variations</a>
+          <a href="#common">Common components</a>
+          <a href="#components">Templates</a>
+        </div>
+      </details>
+      <button id="theme-switch" class="theme-switch" aria-label="Toggle dark mode">Dark mode</button>
+    </nav>
+    <p class="site-title">Apple Style Guide</p>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <a href="#intro">Overview</a>
+    <a href="#foundations">Style foundations</a>
+    <a href="#semantics">Semantic tokens</a>
+    <a href="#states">Interaction states</a>
+    <a href="#responsive-rules">Responsive rules</a>
+    <a href="#a11y">Accessibility checklist</a>
+    <a href="#heroes">Hero variations</a>
+    <a href="#common">Common components</a>
+    <a href="#components">Templates</a>
+  </div>
+
+  <main class="page">
+    <div class="library-shell">
+      <div class="content">
+        <section id="intro" class="section-intro">
+          <p class="kicker">Single page reference</p>
+          <h1>Styles first. Components second.</h1>
+          <p class="lead">This page starts with core visual tokens, then moves into modular section patterns. Layout is intentionally flat and airy so each block stands on its own.</p>
+          <div class="principles">
+            <span class="principle">Clarity over decoration</span>
+            <span class="principle">Semantic tokens over raw values</span>
+            <span class="principle">Consistent states over one-off styling</span>
+          </div>
+        </section>
+
+    <section id="foundations">
+      <h2>Style foundations</h2>
+      <p class="note" style="margin-bottom:12px">Source of truth tokens with explicit values.</p>
+
+      <h3>Color tokens with hex values</h3>
+      <div class="swatch-grid" style="margin-top:10px">
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#0A84FF;"></div><small>Primary blue · #0A84FF</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#0077F0;"></div><small>Blue hover · #0077F0</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#0068D6;"></div><small>Blue pressed · #0068D6</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#F7F8FA;"></div><small>Background · #F7F8FA</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#F1F3F6;"></div><small>Secondary bg · #F1F3F6</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#FFFFFF;"></div><small>Card bg · #FFFFFF</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#1C1F24;"></div><small>Primary text · #1C1F24</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#5A6270;"></div><small>Secondary text · #5A6270</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#8690A0;"></div><small>Tertiary text · #8690A0</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#DFE4EC;"></div><small>Border · #DFE4EC</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#E9EDF3;"></div><small>Divider · #E9EDF3</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#C0C7D2;"></div><small>Disabled · #C0C7D2</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#1F9B63;"></div><small>Success · #1F9B63</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#C68417;"></div><small>Warning · #C68417</small></article>
+        <article class="swatch"><div class="swatch-chip" style="display:block;height:46px;border-radius:10px;border:1px solid rgba(20,28,40,.16);background:#C43F4A;"></div><small>Error · #C43F4A</small></article>
+      </div>
+
+      <h3 style="margin-top:16px">Typography scale with size and weight</h3>
+      <div class="soft" style="margin-top:8px">
+        <div class="type-spec" style="font-size:var(--type-display);font-weight:700;line-height:1.15">Display · clamp(2rem, 2.7vw, 2.8rem) · 700</div>
+        <div class="type-spec" style="font-size:var(--type-h1);font-weight:700">H1 · clamp(1.6rem, 2vw, 2rem) · 700</div>
+        <div class="type-spec" style="font-size:var(--type-h2);font-weight:600">H2 · 1.35rem · 600</div>
+        <div class="type-spec" style="font-size:var(--type-h3);font-weight:600">H3 · 1.1rem · 600</div>
+        <div class="type-spec" style="font-size:var(--type-body);font-weight:400">Body · 0.98rem · 400</div>
+        <div class="type-spec" style="font-size:var(--type-small);font-weight:400">Small · 0.88rem · 400</div>
+        <div class="type-spec" style="font-size:var(--type-caption);font-weight:400">Caption · 0.78rem · 400</div>
+      </div>
+
+      <h3 style="margin-top:16px">Spacing, radius, shadows, breakpoints</h3>
+      <div class="scale-row" style="margin-top:8px">
+        <span class="scale-pill">Spacing: 4 8 12 16 20 24 32 40 56</span>
+        <span class="scale-pill">Radius: 8 12 16 20 pill</span>
+        <span class="scale-pill">Shadows: 1 2 3</span>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <span class="tag">375 mobile</span><span class="tag">430 large mobile</span><span class="tag">768 tablet</span><span class="tag">1024 laptop</span><span class="tag">1280 desktop</span><span class="tag">1440 wide</span>
+      </div>
+    </section>
+
+    <section id="semantics">
+      <h2>Semantic tokens (production mapping)</h2>
+      <p class="note" style="margin-bottom:12px">Use semantic aliases in product code. Raw values belong in token files only.</p>
+      <div class="table semantic-table">
+        <div class="head"><div>Semantic token</div><div>Maps to</div><div>Usage</div></div>
+        <div class="r"><div>text-primary</div><div>#1C1F24</div><div>Main copy and headings</div></div>
+        <div class="r"><div>text-secondary</div><div>#5A6270</div><div>Supporting text</div></div>
+        <div class="r"><div>surface-base</div><div>#FFFFFF</div><div>Cards and elevated regions</div></div>
+        <div class="r"><div>surface-muted</div><div>#F1F3F6</div><div>Subtle grouping backgrounds</div></div>
+        <div class="r"><div>border-subtle</div><div>#DFE4EC</div><div>Inputs, dividers, low emphasis borders</div></div>
+        <div class="r"><div>accent-strong</div><div>#0A84FF</div><div>Primary CTA, active state, links</div></div>
+      </div>
+      <details class="copy-toggle" style="margin-top:12px">
+        <summary>Token JSON snippet</summary>
+        <div class="code-wrap"><button class="copy-btn" data-copy-target="token-json">Copy</button><pre id="token-json">{
+  "color": {
+    "text-primary": "#1C1F24",
+    "text-secondary": "#5A6270",
+    "surface-base": "#FFFFFF",
+    "surface-muted": "#F1F3F6",
+    "border-subtle": "#DFE4EC",
+    "accent-strong": "#0A84FF"
+  },
+  "space": [4, 8, 12, 16, 20, 24, 32, 40, 56],
+  "radius": { "sm": 8, "md": 12, "lg": 16, "xl": 20, "pill": 999 },
+  "motion": { "fast": "120ms", "base": "200ms", "slow": "320ms" }
+}</pre></div>
+      </details>
+    </section>
+
+    <section id="states">
+      <h2>Interaction state matrix</h2>
+      <p class="note" style="margin-bottom:12px">Every interactive primitive must support all states below before shipping.</p>
+      <div class="state-grid">
+        <article class="state-card"><h3>Default</h3><p class="note">Clear affordance, standard contrast.</p></article>
+        <article class="state-card"><h3>Hover</h3><p class="note">Small visual shift, no layout movement.</p></article>
+        <article class="state-card"><h3>Focus-visible</h3><p class="note">2px focus ring with AA contrast minimum.</p></article>
+        <article class="state-card"><h3>Active</h3><p class="note">Pressed depth + stronger tonal response.</p></article>
+        <article class="state-card"><h3>Disabled</h3><p class="note">Lower contrast + blocked pointer interaction.</p></article>
+        <article class="state-card"><h3>Loading</h3><p class="note">Retain dimensions; show progress affordance.</p></article>
+        <article class="state-card"><h3>Error</h3><p class="note">Use clear guidance and a recovery action.</p></article>
+        <article class="state-card"><h3>Success</h3><p class="note">Confirm completion and suggest next step.</p></article>
+      </div>
+    </section>
+
+    <section id="responsive-rules">
+      <h2>Responsive behavior rules</h2>
+      <div class="rule-grid">
+        <article class="soft"><strong>375–429 · Mobile</strong><p class="note">Single column. Bottom navigation preferred. Compact spacing scale.</p></article>
+        <article class="soft"><strong>430–767 · Large mobile</strong><p class="note">Single column with denser utility rows and larger tap zones.</p></article>
+        <article class="soft"><strong>768–1023 · Tablet</strong><p class="note">Two-column content, split hero stacks, expanded navigation labels.</p></article>
+        <article class="soft"><strong>1024–1279 · Laptop</strong><p class="note">Introduce side index / persistent contextual navigation.</p></article>
+        <article class="soft"><strong>1280+ · Desktop</strong><p class="note">Use full rhythm spacing and complex multi-column modules.</p></article>
+      </div>
+    </section>
+
+    <section id="a11y">
+      <h2>Accessibility release checklist</h2>
+      <ul class="checklist">
+        <li>Text contrast passes WCAG AA in every state.</li>
+        <li>Interactive controls remain fully keyboard operable.</li>
+        <li>Focus ring is visible at 200% zoom and in high glare conditions.</li>
+        <li>Touch targets are at least 44×44px.</li>
+        <li>Reduced-motion users get non-animated alternatives.</li>
+        <li>Error states explain what happened and how to recover.</li>
+      </ul>
+    </section>
+
+    <section id="heroes">
+      <h2>Hero variations</h2>
+
+      <article class="hero" style="margin-top:12px">
+        <h2>Hero 1. Minimal centered</h2>
+        <p style="font-size:var(--type-h2)">Short promise, one supporting sentence, two actions using Display/H1 hierarchy and primary action tokens.</p>
+        <div class="row" style="margin-top:12px"><button class="btn btn-primary">Get started</button><button class="btn btn-secondary">View docs</button></div>
+      </article>
+
+      <article class="hero hero-split" style="margin-top:12px">
+        <div>
+          <h2>Hero 2. Split with image</h2>
+          <p>Left narrative, right visual proof.</p>
+          <div class="row" style="margin-top:12px"><button class="btn btn-primary">Try now</button><button class="btn btn-ghost">See examples</button></div>
+        </div>
+        <aside class="media">Product preview 16:9</aside>
+      </article>
+
+      <article class="hero" style="margin-top:12px">
+        <h2>Hero 3. With social proof</h2>
+        <p>Headline with logo strip beneath.</p>
+        <div class="row" style="margin-top:12px"><span class="tag">Acme</span><span class="tag">North</span><span class="tag">Pulse</span><span class="tag">Summit</span></div>
+      </article>
+
+      <article class="hero" style="margin-top:12px">
+        <h2>Hero 4. With metrics</h2>
+        <div class="grid-4" style="margin-top:10px">
+          <div class="stat"><strong>42%</strong><span class="note">faster build</span></div>
+          <div class="stat"><strong>31%</strong><span class="note">less rework</span></div>
+          <div class="stat"><strong>4.8/5</strong><span class="note">team score</span></div>
+          <div class="stat"><strong>99%</strong><span class="note">token consistency</span></div>
+        </div>
+      </article>
+
+      <article class="hero hero-split" style="margin-top:12px">
+        <div>
+          <h2>Hero 5. Image-led</h2>
+          <p>Visual first, copy second, clean CTA row.</p>
+        </div>
+        <aside class="media">Wide hero visual</aside>
+      </article>
+    </section>
+
+    <section id="common">
+      <h2>Common UI components</h2>
+      <p class="note" style="margin-bottom:12px">Baseline primitives used across product surfaces. Keep these visually consistent before composing larger templates.</p>
+      <div class="grid-2">
+        <article class="block">
+          <h3>Buttons + segmented + chips</h3>
+          <div class="row" style="margin-bottom:10px"><button class="btn btn-primary">Primary</button><button class="btn btn-secondary">Secondary</button><button class="btn btn-ghost">Ghost</button></div>
+          <div class="segmented" style="margin-bottom:10px"><button class="btn btn-secondary">Monthly</button><button class="btn btn-primary">Yearly</button></div>
+          <div class="row"><span class="tag">Beta</span><span class="tag">New</span><span class="tag">Popular</span></div>
+        </article>
+        <article class="block">
+          <h3>Inputs + selects + avatars</h3>
+          <div class="row" style="margin-bottom:10px"><input class="input" placeholder="Email address"><button class="btn btn-primary">Submit</button></div>
+          <div class="row" style="margin-bottom:10px"><input class="search" placeholder="Search patterns"><span class="tag">⌘K</span></div>
+          <div class="avatar-row"><span class="avatar">A</span><span class="avatar">M</span><span class="avatar">N</span><span class="avatar">S</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="components">
+      <h2>Modular components + mixed templates</h2>
+      <p class="note" style="margin-bottom:12px">Grouped by function so teams can compose sections faster instead of picking isolated single blocks.</p>
+
+      <article class="group">
+        <h3>Content + narrative group</h3>
+        <p class="note">Structure: one headline + one support line + one action lane. Use `grid-2` for split stories and `media` for neutral visual placeholders.</p>
+        <details class="copy-toggle">
+          <summary>Copy-paste template code</summary>
+          <div class="code-wrap"><button class="copy-btn" data-copy-target="tpl-content">Copy</button><pre id="tpl-content">&lt;section class="grid-2"&gt;
+  &lt;article class="block"&gt;
+    &lt;h3&gt;Feature trio&lt;/h3&gt;
+    &lt;div class="grid-3"&gt;...&lt;/div&gt;
+  &lt;/article&gt;
+  &lt;article class="block"&gt;
+    &lt;h3&gt;Feature + media&lt;/h3&gt;
+    &lt;div class="hero-split"&gt;...&lt;/div&gt;
+  &lt;/article&gt;
+&lt;/section&gt;</pre></div>
+        </details>
+        <div class="grid-2">
+          <div class="block"><h3>Feature trio</h3><div class="grid-3"><div class="feature">Clarity</div><div class="feature">Consistency</div><div class="feature">Speed</div></div></div>
+          <div class="block"><h3>Feature + media</h3><div class="hero-split"><div class="note">Bullet narrative and supporting context.</div><div class="media">Image</div></div></div>
+          <div class="block"><h3>Story + quote</h3><p class="note">Headline, supporting paragraph, short quote, then CTA.</p><div class="row" style="margin-top:10px"><button class="btn btn-primary">Read case study</button></div></div>
+          <div class="block"><h3>Alternating media row</h3><div class="media">3:2</div></div>
+        </div>
+      </article>
+
+      <figure class="full-bleed-media" aria-label="Full width image template">Full-width editorial image (no card)</figure>
+
+      <article class="group">
+        <h3>Image-content card variations</h3>
+        <p class="note">Pattern anatomy: image + eyebrow + headline + body + CTA. Keep 0 padding on image region; content uses spacing-16 or spacing-20.</p>
+        <details class="copy-toggle">
+          <summary>Copy-paste template code</summary>
+          <div class="code-wrap"><button class="copy-btn" data-copy-target="tpl-media-card">Copy</button><pre id="tpl-media-card">&lt;article class="media-card media-card-side"&gt;
+  &lt;div class="media-card-image"&gt;Image&lt;/div&gt;
+  &lt;div class="media-card-body"&gt;
+    &lt;p class="kicker"&gt;Category&lt;/p&gt;
+    &lt;h3&gt;Headline&lt;/h3&gt;
+    &lt;p class="note"&gt;Body copy...&lt;/p&gt;
+    &lt;a class="link" href="#"&gt;CTA →&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</pre></div>
+        </details>
+        <div class="grid-2">
+          <article class="media-card">
+            <div class="media-card-image">Image above</div>
+            <div class="media-card-body"><p class="kicker">Category</p><h3>Card with image on top</h3><p class="note">The image sits edge-to-edge. Content area carries narrative and action.</p><a href="#" class="link">View details →</a></div>
+          </article>
+          <article class="media-card media-card-bottom">
+            <div class="media-card-body"><p class="kicker">Update</p><h3>Card with image below</h3><p class="note">Useful when copy needs to lead and media acts as supporting evidence.</p><a href="#" class="link">Read update →</a></div>
+            <div class="media-card-image">Image below</div>
+          </article>
+        </div>
+        <div class="media-side-grid">
+          <article class="media-card media-card-side">
+            <div class="media-card-image">Image left on wide viewports</div>
+            <div class="media-card-body"><p class="kicker">Guideline</p><h3>Image left, content right</h3><p class="note">Stacks vertically on smaller breakpoints to avoid cramped reading width.</p><a href="#" class="link">Open pattern →</a></div>
+          </article>
+          <article class="media-card media-card-side media-card-side-reverse">
+            <div class="media-card-image">Image right on wide viewports</div>
+            <div class="media-card-body"><p class="kicker">Guideline</p><h3>Content left, image right</h3><p class="note">Use when headline should stay aligned with surrounding text rails.</p><a href="#" class="link">Use variation →</a></div>
+          </article>
+        </div>
+      </article>
+
+      <figure class="full-bleed-media alt" aria-label="Full width image template">Full-width product montage (no card)</figure>
+
+      <article class="group">
+        <h3>Social proof + conversion group</h3>
+        <p class="note">Structure: proof first, then capture. Place testimonials/logos before signup forms to increase trust conversion.</p>
+        <div class="grid-2">
+          <div class="block"><h3>Testimonial trio</h3><div class="grid-3"><article class="review"><blockquote>“Great system.”</blockquote><small>Design Lead</small></article><article class="review"><blockquote>“Very clear.”</blockquote><small>Founder</small></article><article class="review"><blockquote>“Fast to ship.”</blockquote><small>Engineer</small></article></div></div>
+          <div class="block"><h3>Logo + ratings + avatars</h3><div class="row" style="margin-bottom:10px"><span class="tag">Aster</span><span class="tag">Nexa</span><span class="tag">Verve</span><span class="tag">Northstar</span></div><div class="row" style="margin-bottom:10px"><span class="tag">★★★★★ 4.9</span><span class="tag">2,400+ teams</span></div><div class="avatar-row"><span class="avatar">A</span><span class="avatar">N</span><span class="avatar">V</span><span class="avatar">S</span></div></div>
+          <div class="block"><h3>Inline signup</h3><div class="row"><input class="input" style="max-width:300px" placeholder="Email"><button class="btn btn-primary">Join</button></div></div>
+          <div class="block"><h3>Two-field signup + download gate</h3><div class="grid-2"><input class="input" placeholder="Name"><input class="input" placeholder="Email"></div><p class="note" style="margin-top:10px">After submit, unlock resource download in same flow.</p></div>
+        </div>
+      </article>
+
+      <article class="group">
+        <h3>Navigation + utility group</h3>
+        <p class="note">Structure: primary nav + context nav + wayfinding + account nav. Keep controls in one family and maintain active state consistency.</p>
+        <div class="grid-2">
+          <div class="block"><h3>Top nav + tabs</h3><div class="row" style="margin-bottom:10px"><span class="tag">Overview</span><span class="tag">Features</span><span class="tag">Pricing</span><button class="btn btn-primary">Start</button></div><div class="segmented" role="tablist" aria-label="Library tabs"><button class="btn btn-secondary">All</button><button class="btn btn-primary">Components</button><button class="btn btn-secondary">Docs</button></div></div>
+          <div class="block"><h3>Segment + breadcrumb + mobile nav</h3><div class="segmented" style="margin-bottom:10px" role="tablist" aria-label="View mode"><button class="btn btn-secondary">Preview</button><button class="btn btn-primary">Code</button></div><p class="note" style="margin-bottom:10px">Home › Library › Components</p><div class="row"><span class="tag">Home</span><span class="tag">Search</span><span class="tag">Saved</span><span class="tag">Profile</span></div></div>
+        </div>
+      </article>
+
+      <article class="group">
+        <h3>Data + decision group</h3>
+        <p class="note">Tables keep column integrity on mobile via horizontal scroll. Never split columns into stacked rows for comparison layouts.</p>
+        <details class="copy-toggle">
+          <summary>Copy-paste table template</summary>
+          <div class="code-wrap"><button class="copy-btn" data-copy-target="tpl-table">Copy</button><pre id="tpl-table">&lt;div class="table"&gt;
+  &lt;div class="head"&gt;
+    &lt;div&gt;Feature&lt;/div&gt;&lt;div&gt;Pro&lt;/div&gt;&lt;div&gt;Team&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="r"&gt;
+    &lt;div&gt;Library&lt;/div&gt;&lt;div&gt;Yes&lt;/div&gt;&lt;div&gt;Yes&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre></div>
+        </details>
+        <div class="grid-2">
+          <div class="block"><h3>Feature comparison</h3><div class="table"><div class="head"><div>Feature</div><div>Pro</div><div>Team</div></div><div class="r"><div>Library</div><div>Yes</div><div>Yes</div></div><div class="r"><div>Review</div><div>No</div><div>Yes</div></div></div></div>
+          <div class="block"><h3>Billing + pricing cards</h3><div class="segmented" style="margin-bottom:10px" role="tablist" aria-label="Billing interval"><button class="btn btn-secondary">Monthly</button><button class="btn btn-primary">Yearly</button></div><div class="grid-3"><div class="soft">Starter</div><div class="soft">Pro</div><div class="soft">Team</div></div></div>
+        </div>
+      </article>
+    </section>
+
+    <section>
+      <h2>AI instruction block</h2>
+      <p class="lead">Use this as source of truth. Reuse these patterns directly. Keep spacing calm, surfaces soft, and hierarchy clean. Do not add visual noise.</p>
+    </section>
+
+    <!--
+      AI SOURCE OF TRUTH
+      Reuse these styles and section patterns as-is.
+      Keep Inter, primary blue actions, soft greys, and restrained spacing.
+      Avoid card nesting, heavy borders, loud gradients, and decorative clutter.
+      Adapt content and structure, not the visual language.
+    -->
+      </div>
+    </div>
+  </main>
+  <script>
+    const themeSwitch = document.getElementById('theme-switch');
+    const savedTheme = localStorage.getItem('site-theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+    themeSwitch.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? 'Light mode' : 'Dark mode';
+
+    themeSwitch?.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const next = isDark ? 'light' : 'dark';
+      if (next === 'light') document.documentElement.removeAttribute('data-theme');
+      else document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('site-theme', next);
+      themeSwitch.textContent = next === 'dark' ? 'Light mode' : 'Dark mode';
+    });
+
+    const menuButton = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton?.addEventListener('click', () => {
+      const isHidden = mobileMenu.hasAttribute('hidden');
+      if (isHidden) mobileMenu.removeAttribute('hidden');
+      else mobileMenu.setAttribute('hidden', '');
+      menuButton.setAttribute('aria-expanded', String(isHidden));
+    });
+
+    mobileMenu?.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenu.setAttribute('hidden', '');
+        menuButton?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.copy-btn').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const targetId = button.getAttribute('data-copy-target');
+        const block = document.getElementById(targetId);
+        if (!block) return;
+        try {
+          await navigator.clipboard.writeText(block.textContent.trim());
+          const original = button.textContent;
+          button.textContent = 'Copied';
+          setTimeout(() => (button.textContent = original), 1200);
+        } catch {
+          button.textContent = 'Copy failed';
+          setTimeout(() => (button.textContent = 'Copy'), 1200);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
