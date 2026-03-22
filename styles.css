@@ -1,0 +1,73 @@
+:root {
+  --bg: oklch(0.97 0.01 85);
+  --panel: oklch(0.99 0.005 85);
+  --text: oklch(0.25 0.02 45);
+  --muted: oklch(0.48 0.02 55);
+  --line: oklch(0.87 0.01 75);
+  --accent: oklch(0.62 0.19 38);
+  --accent-ink: oklch(0.98 0.01 85);
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at 80% -10%, oklch(0.94 0.04 40), transparent 30%), var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 44px);
+}
+
+.hero h1 {
+  font-family: "Newsreader", serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 4.3rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.lede {
+  max-width: 62ch;
+  color: color-mix(in oklch, var(--text), white 25%);
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
+}
+
+.actions { display: flex; gap: 12px; margin-top: 20px; }
+.btn {
+  border-radius: 999px;
+  border: 1px solid transparent;
+  padding: 0.7rem 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--line); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+.card h2 { margin: 0 0 8px; font-size: 1.05rem; }
+.card p { margin: 0; color: var(--muted); }
